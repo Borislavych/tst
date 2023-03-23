@@ -6,7 +6,7 @@ const HomePage = () => {
     <div>
       <div className="flex flex-col items-center justify-center">
         {/* APP HEADING / TITLE */}
-        <h1 className="my-5 text-4xl font-bold text-black">Todo App</h1>
+        <h1 className="my-5 text-4xl font-bold text-black" data-testid="title-home-page">Todo App</h1>
 
         {/* ADD NEW TODOS FORM COMPONENT */}
         <AddNewTodoForm />
