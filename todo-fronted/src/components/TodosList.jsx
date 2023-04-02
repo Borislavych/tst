@@ -24,7 +24,7 @@ const TodosList = () => {
 
       {/* Todos List */}
       {todos.length === 0 ? (
-        <h2 className="text-black text-2xl font-bold my-2">Sorry! No Todos Found.</h2>
+        <h2 className="text-black text-2xl font-bold my-2" data-testid="text-no-todo">Sorry! No Todos Found.</h2>
       ) : (
         todos.map((todo, index) => (
           <div key={index} className="bg-gray-100 w-full rounded-sm shadow-md p-5 my-2 transition-all duration-100 hover:shadow-lg">
@@ -43,7 +43,7 @@ const TodosList = () => {
                 Edit
               </Link>
 
-              <button className="bg-red-500 text-white rounded-sm shadow-md w-full my-2 py-2 ml-2 transition-all duration-100 hover:bg-red-600" onClick={() => handleDeleteTodo(todo.id)}>
+              <button className="bg-red-500 text-white rounded-sm shadow-md w-full my-2 py-2 ml-2 transition-all duration-100 hover:bg-red-600" data-testid="button-delete" onClick={() => handleDeleteTodo(todo.id)}>
                 Delete
               </button>
             </div>

@@ -68,13 +68,13 @@ const AddNewTodoForm = () => {
           handleSubmit(e);
         }}>
         {/* TODOS TITLE INPUT FIELD */}
-        <input type="text" className="w-full border-2 border-gray-500 px-5 py-2 rounded-sm my-2" placeholder="Add here todo title" value={todoTitle} onChange={(e) => setTodoTitle(e.target.value)} />
+        <input type="text" className="w-full border-2 border-gray-500 px-5 py-2 rounded-sm my-2" data-testid="add-title" placeholder="Add here todo title" value={todoTitle} onChange={(e) => setTodoTitle(e.target.value)} />
 
         {/* TODOS DESCRIPTION INPUT FIELD */}
-        <textarea className="w-full border-2 border-gray-500 px-5 py-2 rounded-sm" cols="30" rows="3" placeholder="Add here todo description" value={todoDescription} onChange={(e) => setTodoDescription(e.target.value)} />
+        <textarea className="w-full border-2 border-gray-500 px-5 py-2 rounded-sm" cols="30" rows="3" data-testid="add-description" placeholder="Add here todo description" value={todoDescription} onChange={(e) => setTodoDescription(e.target.value)} />
 
         {/* TODOS ADD BUTTON */}
-        <button type="submit" className="bg-blue-500 text-white rounded-sm shadow-md w-full my-2 py-2 transition-all duration-100 hover:bg-blue-600">
+        <button type="submit" className="bg-blue-500 text-white rounded-sm shadow-md w-full my-2 py-2 transition-all duration-100 hover:bg-blue-600" data-testid="button-add-todo">
           {isLoadingPost ? "Adding ... !!!" : "Add Todo"}
         </button>
       </form>
